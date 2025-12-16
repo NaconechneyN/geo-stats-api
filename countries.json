@@ -1,0 +1,65 @@
+[
+  {
+    "name": { "common": "Argentina" },
+    "continents": [ "South America" ],
+    "capital": [ "Buenos Aires" ],
+    "population": 45376763,
+    "area": 2780400.0,
+    "region": "Americas",
+    "flag": "🇦🇷"
+  },
+  {
+    "name": { "common": "Spain" },
+    "continents": [ "Europe" ],
+    "capital": [ "Madrid" ],
+    "population": 47351567,
+    "area": 505992.0,
+    "region": "Europe",
+    "flag": "🇪🇸"
+  },
+  {
+    "name": { "common": "Brazil" },
+    "continents": [ "South America" ],
+    "capital": [ "Brasília" ],
+    "population": 212559409,
+    "area": 8515767.0,
+    "region": "Americas",
+    "flag": "🇧🇷"
+  },
+  {
+    "name": { "common": "Japan" },
+    "continents": [ "Asia" ],
+    "capital": [ "Tokyo" ],
+    "population": 125836021,
+    "area": 377930.0,
+    "region": "Asia",
+    "flag": "🇯🇵"
+  },
+  {
+    "name": { "common": "United States" },
+    "continents": [ "North America" ],
+    "capital": [ "Washington, D.C." ],
+    "population": 329484123,
+    "area": 9372610.0,
+    "region": "Americas",
+    "flag": "🇺🇸"
+  },
+  {
+    "name": { "common": "China" },
+    "continents": [ "Asia" ],
+    "capital": [ "Beijing" ],
+    "population": 1402112000,
+    "area": 9640011.0,
+    "region": "Asia",
+    "flag": "🇨🇳"
+  },
+  {
+    "name": { "common": "Nigeria" },
+    "continents": [ "Africa" ],
+    "capital": [ "Abuja" ],
+    "population": 206139587,
+    "area": 923768.0,
+    "region": "Africa",
+    "flag": "🇳🇬"
+  }
+]
