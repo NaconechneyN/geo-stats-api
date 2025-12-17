@@ -34,5 +34,13 @@ API REST de alto rendimiento construida con **FastAPI** y **SQLAlchemy**. Diseñ
     *   Ejecuta `POST /etl/populate-db` para cargar los datos iniciales.
     *   Ejecuta `GET /stats/continent-summary` para ver el análisis SQL.
 
+4.  ## 🔐 Seguridad Implementada
+
+Este proyecto cuenta con un sistema robusto de autenticación y protección de datos:
+
+*   **JWT (JSON Web Tokens):** Autenticación *stateless*. Endpoints críticos protegidos mediante dependencias de seguridad (`OAuth2PasswordBearer`).
+*   **Password Hashing:** Las contraseñas se almacenan encriptadas usando **Bcrypt** (vía `Passlib`). Nunca se guardan en texto plano.
+*   **Environment Variables:** Gestión de secretos (Database URL, Secret Keys) mediante archivo `.env` (no incluido en el repositorio por seguridad).     
+
 ---
 **Autor:** [Nicolás Naconechney](https://naconechneyn.github.io/)
