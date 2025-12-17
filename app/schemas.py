@@ -22,3 +22,16 @@ class CountryResponse(CountryBase):
 
     class Config:
         from_attributes = True # Antes conocido como orm_mode
+        
+class UserCreate(BaseModel):
+    username: str
+    password: str
+
+class UserResponse(BaseModel):
+    username: str
+    class Config:
+        from_attributes = True
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str        

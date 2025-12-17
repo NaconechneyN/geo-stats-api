@@ -14,3 +14,10 @@ class Country(Base):
     
     # Dato curioso: Guardaremos la bandera (emoji o url) y un dato extra
     flag_emoji = Column(String, nullable=True)
+
+class User(Base):
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String, unique=True, index=True)
+    hashed_password = Column(String) # NUNCA se guarda una contraseña real

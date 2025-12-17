@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import func
-from . import models
+from . import models, security, schemas
 
 def get_country_by_name(db: Session, name: str):
     return db.query(models.Country).filter(models.Country.name == name).first()
@@ -32,3 +32,14 @@ def get_continent_stats(db: Session):
         func.sum(models.Country.population).label("total_population"),
         func.avg(models.Country.area_sq_km).label("avg_area")
     ).group_by(models.Country.continent).all()
+
+def get_user_by_username(db: Session, username: str):
+    return db.query(models.User).filter(models.User.username == username).first()
+
+def create_user(db: Session, user: schemas.UserCreate):
+    hashed_password = security.get_password_hash(user.password)
+    db_user = models.User(username=user.username, hashed_password=hashed_password)
+    db.add(db_user)
+    db.commit()
+    db.refresh(db_user)
+    return db_user    
